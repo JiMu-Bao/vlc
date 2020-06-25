@@ -33,7 +33,7 @@ libvlc_opengl_la_LDFLAGS = \
     -version-info 0:0:0
 
 if HAVE_GL
-EXTRA_LTLIBRARIES += libvlc_opengl.la
+noinst_LTLIBRARIES += libvlc_opengl.la
 endif
 
 # Convenience library for OpenGL components -- OpenGL ES only
@@ -48,7 +48,7 @@ libvlc_opengles_la_LDFLAGS = \
 
 libvlc_opengles_la_CFLAGS += $(GLES2_CFLAGS)
 libvlc_opengles_la_LIBADD += $(GLES2_LIBS)
-EXTRA_LTLIBRARIES += libvlc_opengles.la
+noinst_LTLIBRARIES += libvlc_opengles.la
 
 ### OpenGL ###
 libgles2_plugin_la_SOURCES = video_output/opengl/display.c
